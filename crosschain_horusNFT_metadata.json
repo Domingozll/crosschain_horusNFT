@@ -1,0 +1,16 @@
+{
+  "description": "crosschain_horusNFT test.", 
+  "external_url": "https://openseacreatures.io/3", 
+  "image": "https://icy-crimson-goldfish.myfilebase.com/ipfs/Qmawh2evQfykHkCREfbP7Zn1BdokkaHLSRbHEYdUw3L26b", 
+  "name": "tibet moto travel",
+  "attributes": [ 
+  	{
+  		"trait_type": "Breed",
+  		"value": "horus"
+  	},
+  	{
+  		"trait_type": "temperature",
+  		"value":"average"
+  	}
+  ]
+}
