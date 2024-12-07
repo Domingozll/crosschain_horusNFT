@@ -1,11 +1,11 @@
-// SPDX-License-Identifier: MIT
-
+//SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
-import { HorusNFT } from "./HorusNFT.sol";
+import {HorusNFT} from "./HorusNFT.sol";
 
-contract WrapHorusNFT  is HorusNFT {
-
+contract WrappedHorusNFT is HorusNFT {
+    
+  
    constructor (
         string memory tokenName,
         string memory tokenSymbol

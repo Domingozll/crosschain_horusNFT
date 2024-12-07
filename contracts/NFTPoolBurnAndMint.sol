@@ -7,7 +7,7 @@ import {Client} from "@chainlink/contracts-ccip/src/v0.8/ccip/libraries/Client.s
 import {CCIPReceiver} from "@chainlink/contracts-ccip/src/v0.8/ccip/applications/CCIPReceiver.sol";
 import {IERC20} from "@chainlink/contracts-ccip/src/v0.8/vendor/openzeppelin-solidity/v4.8.3/contracts/token/ERC20/IERC20.sol";
 import {SafeERC20} from "@chainlink/contracts-ccip/src/v0.8/vendor/openzeppelin-solidity/v4.8.3/contracts/token/ERC20/utils/SafeERC20.sol";
-import {WrapHorusNFT} from "./WrapHorusNFT.sol";
+import {WrappedHorusNFT} from "./WrappedHorusNFT.sol";
 
 /**
  * THIS IS AN EXAMPLE CONTRACT THAT USES HARDCODED VALUES FOR CLARITY.
@@ -43,7 +43,7 @@ contract NFTPoolBurnAndMint is CCIPReceiver, OwnerIsCreator {
 
     IERC20 private s_linkToken;
 
-    WrapHorusNFT public wnft;
+    WrappedHorusNFT public wnft;
 
     struct RequestData {
         uint256 tokenId;
@@ -59,7 +59,7 @@ contract NFTPoolBurnAndMint is CCIPReceiver, OwnerIsCreator {
         address wnftAddr
     ) CCIPReceiver(_router) {
         s_linkToken = IERC20(_link);
-        wnft = WrapHorusNFT(wnftAddr);
+        wnft = WrappedHorusNFT(wnftAddr);
     }
 
     /// @dev Modifier that checks the receiver address is not 0.
